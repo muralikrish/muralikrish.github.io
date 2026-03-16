@@ -1,3 +1,8 @@
+No problem! I have updated the HTML file, removing the "My Judging Portfolio" button and re-adding the important links for your Top 10 certificate and your Coursera certifications.
+
+You can now copy and paste the entire block of code below into your `index.html` file on GitHub to have these changes go live:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,25 +42,25 @@
             padding: 40px 20px;
         }
 
-        /* NEW Hero Section - Side-by-Side Flex Layout */
+        /* Hero Section - Side-by-Side Flex Layout */
         .hero {
-            display: flex; /* Active Flexbox */
-            align-items: center; /* Vertically centers items */
-            justify-content: center; /* Centers the whole block horizontally */
-            gap: 40px; /* Space between photo and text */
-            padding: 80px 40px 60px 40px; /* Adjusted padding */
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 40px; 
+            padding: 80px 40px 60px 40px; 
             background: linear-gradient(135deg, #ffffff 0%, #e0eafc 100%);
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin: -65px auto 40px auto; /* Pulls image up through the boundary conceptually */
+            margin: -65px auto 40px auto; 
             z-index: 2;
-            text-align: left; /* Left-aligns text conceptually */
+            text-align: left; 
         }
 
         /* The Headshot Frame - Flex Item */
         .headshot-container {
-            flex-shrink: 0; /* Prevents image from shrinking */
-            width: 140px; /* Slightly larger in this layout */
+            flex-shrink: 0; 
+            width: 140px; 
             height: 140px;
             border-radius: 50%;
             border: 5px solid white;
@@ -73,7 +78,7 @@
 
         /* Text content - Flex Item */
         .hero-content {
-            flex: 1; /* Occupies remaining space */
+            flex: 1; 
             max-width: 600px;
         }
 
@@ -102,8 +107,8 @@
         .hero-buttons {
             display: flex;
             gap: 15px;
-            justify-content: flex-start; /* Aligns to left text border conceptually */
-            flex-wrap: wrap; /* Wraps on mobile */
+            justify-content: flex-start; 
+            flex-wrap: wrap; 
         }
 
         .cta-button {
@@ -125,7 +130,7 @@
             transform: translateY(-2px);
         }
 
-        /* Secondary Button Style conceptually */
+        /* Secondary Button Style */
         .cta-button-secondary {
             background-color: white;
             color: var(--primary-color);
@@ -192,7 +197,7 @@
             margin-bottom: 10px;
         }
 
-        /* Skill Pills conceptually */
+        /* Skill Pills */
         .skills-container {
             display: flex;
             flex-wrap: wrap;
@@ -209,7 +214,7 @@
             font-weight: 600;
         }
 
-        /* Links conceptually */
+        /* Links */
         a {
             color: var(--accent-color);
             text-decoration: none;
@@ -242,7 +247,6 @@
             
             <div class="hero-buttons">
                 <a href="https://adplist.org/mentors/muralikrishna-veeramosu" target="_blank" class="cta-button">Book a Mentorship Session</a>
-                <a href="https://devpost.com/yourprofile" target="_blank" class="cta-button cta-button-secondary">My Judging Portfolio</a>
             </div>
         </div>
     </header>
@@ -253,7 +257,7 @@
         <div class="card">
             <h4><span>🏆</span> Mentorship & Recognition</h4>
             <ul>
-                <li><b>Top 1% Global Mentor:</b> Recognized in the top 1% for Q1 2026 on ADPList, and top 10 for Q4 2025. Achieved the 100 mentorship minutes milestone.</li>
+                <li><b>Top 1% Global Mentor:</b> Recognized in the top 1% for Q1 2026 on ADPList, and <a href="https://adplist.org/community-certifications/top10fresh-dec-2025-ios-engineering-97a2bf" target="_blank">Top 10 iOS Mentor for Q4 2025</a>. Achieved the 100 mentorship minutes milestone.</li>
                 <li><b>Hackathon Judge:</b> Evaluated 250+ submissions on Devpost, including United Hacks v6, AI Vibe, and the MEGA Hackathon.</li>
                 <li><b>Career Coaching:</b> Interviewed 24 fellows to date through Braven.</li>
                 <li><b>Professional Stature:</b> Achieved CITP (Certified IT Practitioner) membership with the British Computer Society (BCS).</li>
@@ -266,10 +270,10 @@
                 <li><b>Code the Dream (Python 200 - AI/ML):</b> Delivering live group sessions for the <a href="https://github.com/Code-the-Dream-School/python-200/tree/main/lessons" target="_blank">Python + AI curriculum</a> starting March 25, 2026.</li>
                 <li><b>Hackathon Success:</b> 2nd Place in the Fidelity AI-exclusive Hackathon (Dependency Resolvers).</li>
                 <li><b>Certifications:</b>
-                    <br>- Supervised Machine Learning (DeepLearning.AI)
-                    <br>- Advanced Learning Algorithms (DeepLearning.AI)
-                    <br>- Deep Learning Specialization (DeepLearning.AI)
-                    <br>- Prompt Engineering for ChatGPT (Vanderbilt)
+                    <br>- <a href="https://www.coursera.org/learn/machine-learning/paidmedia?specialization=machine-learning-introduction" target="_blank">Supervised Machine Learning</a> (DeepLearning.AI)
+                    <br>- <a href="https://www.coursera.org/learn/advanced-learning-algorithms/paidmedia?specialization=machine-learning-introduction" target="_blank">Advanced Learning Algorithms</a> (DeepLearning.AI)
+                    <br>- <a href="https://www.coursera.org/specializations/deep-learning" target="_blank">Deep Learning Specialization</a> (DeepLearning.AI)
+                    <br>- <a href="https://www.coursera.org/learn/prompt-engineering" target="_blank">Prompt Engineering for ChatGPT</a> (Vanderbilt)
                 </li>
             </ul>
         </div>
@@ -292,9 +296,9 @@
             </ul>
         </div>
 
-    </div> <h2 class="section-title">Core Technical Expertise conceptually</h2>
+    </div> <h2 class="section-title">Core Technical Expertise</h2>
     <div class="card" style="border-top: none; text-align: center; padding: 30px;">
-        <p style="color: var(--text-muted); margin-top: 0;">Proficient across the modern mobile and AI development stack conceptually.</p>
+        <p style="color: var(--text-muted); margin-top: 0;">Proficient across the modern mobile and AI development stack.</p>
         <div class="skills-container" style="justify-content: center;">
             <span class="skill-pill">Swift & SwiftUI</span>
             <span class="skill-pill">Objective-C</span>
@@ -310,10 +314,12 @@
     </div>
 
     <footer>
-        <p>B.E. in Electronics and Communication Engineering • © 2026 Muralikrishna Veeramosu conceptually</p>
+        <p>B.E. in Electronics and Communication Engineering • © 2026 Muralikrishna Veeramosu</p>
     </footer>
 
 </div>
 
 </body>
 </html>
+
+```
