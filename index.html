@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muralikrishna Veeramosu - Portfolio</title>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://muralikrish.github.io/">
+    <meta property="og:title" content="Muralikrishna Veeramosu - Principal iOS Engineer, AI Practitioner & Top 1% Mentor">
+    <meta property="og:description" content="Over 14 years in mobile architecture, AI/ML coursework, Top 1% Mentor (ADPList), 250+ projects judged (Devpost). Code the Dream Python+AI Cohort kicks off March 25.">
+    <meta property="og:image" content="https://muralikrish.github.io/linkedin-thumbnail.png">
+    
     <style>
         /* Base Styles & Typography */
         :root {
@@ -31,14 +37,34 @@
             padding: 40px 20px;
         }
 
-        /* Hero Section */
+        /* Hero Section - Refactored for Photo Integration */
         .hero {
             text-align: center;
-            padding: 60px 20px;
+            padding: 60px 20px 40px 20px; /* Reduced bottom padding */
             background: linear-gradient(135deg, #ffffff 0%, #e0eafc 100%);
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 40px;
+            margin-bottom: 30px; /* Reduced margin */
+            position: relative;
+        }
+
+        /* The Headshot Frame */
+        .headshot-container {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: -65px auto 20px auto; /* Pulls image up through the hero boundary */
+            z-index: 2;
+            background-color: white; /* Ensures frame visibility if image loads slow */
+        }
+
+        .headshot-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Crops image to fill circle, perfect for headshots */
         }
 
         .hero h1 {
@@ -63,6 +89,15 @@
             margin: 0 auto 25px auto;
         }
 
+        /* Button Grouping */
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap; /* Wraps on mobile */
+            margin-top: 25px;
+        }
+
         .cta-button {
             display: inline-block;
             background-color: var(--accent-color);
@@ -74,10 +109,25 @@
             font-size: 1.1em;
             transition: background-color 0.3s, transform 0.2s;
             box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+            text-align: center;
         }
 
         .cta-button:hover {
             background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Secondary Button Style */
+        .cta-button-secondary {
+            background-color: white;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .cta-button-secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
             transform: translateY(-2px);
         }
 
@@ -173,10 +223,18 @@
 
 <div class="container">
     <header class="hero">
+        <div class="headshot-container">
+            <img src="headshot.jpg" alt="Muralikrishna Veeramosu" class="headshot-img">
+        </div>
+
         <h1>Muralikrishna Veeramosu</h1>
-        <h3>Principal iOS Engineer | AI/ML Practitioner | Top 1% Global Mentor</h3>
+        <h3>Principal iOS Engineer | AI Practitioner | Top 1% Global Mentor</h3>
         <p>Bridging over 14 years of scalable mobile architecture with modern AI integration and tech community leadership.</p>
-        <a href="https://adplist.org/mentors/muralikrishna-veeramosu" target="_blank" class="cta-button">Book a Mentorship Session on ADPList</a>
+        
+        <div class="hero-buttons">
+            <a href="https://adplist.org/mentors/muralikrishna-veeramosu" target="_blank" class="cta-button">Book a Mentorship Session</a>
+            <a href="https://devpost.com/yourprofile" target="_blank" class="cta-button cta-button-secondary">My Judging Portfolio</a>
+        </div>
     </header>
 
     <h2 class="section-title">Career Highlights & Impact</h2>
@@ -185,7 +243,7 @@
         <div class="card">
             <h4><span>🏆</span> Mentorship & Recognition</h4>
             <ul>
-                <li><b>Top 1% Global Mentor:</b> Recognized in the top 1% for Q1 2026 on ADPList, and <a href="https://adplist.org/community-certifications/top10fresh-dec-2025-ios-engineering-97a2bf" target="_blank">Top 10 iOS Mentor for Q4 2025</a>. Achieved the 100 mentorship minutes milestone.</li>
+                <li><b>Top 1% Global Mentor:</b> Recognized in the top 1% for Q1 2026 on ADPList, and top 10 for Q4 2025. Achieved the 100 mentorship minutes milestone.</li>
                 <li><b>Hackathon Judge:</b> Evaluated 250+ submissions on Devpost, including United Hacks v6, AI Vibe, and the MEGA Hackathon.</li>
                 <li><b>Career Coaching:</b> Interviewed 24 fellows to date through Braven.</li>
                 <li><b>Professional Stature:</b> Achieved CITP (Certified IT Practitioner) membership with the British Computer Society (BCS).</li>
@@ -198,10 +256,10 @@
                 <li><b>Code the Dream (Python 200 - AI/ML):</b> Delivering live group sessions for the <a href="https://github.com/Code-the-Dream-School/python-200/tree/main/lessons" target="_blank">Python + AI curriculum</a> starting March 25, 2026.</li>
                 <li><b>Hackathon Success:</b> 2nd Place in the Fidelity AI-exclusive Hackathon (Dependency Resolvers).</li>
                 <li><b>Certifications:</b>
-                    <br>- <a href="https://www.coursera.org/learn/machine-learning/paidmedia?specialization=machine-learning-introduction" target="_blank">Supervised Machine Learning</a> (DeepLearning.AI)
-                    <br>- <a href="https://www.coursera.org/learn/advanced-learning-algorithms/paidmedia?specialization=machine-learning-introduction" target="_blank">Advanced Learning Algorithms</a> (DeepLearning.AI)
+                    <br>- Supervised Machine Learning (DeepLearning.AI)
+                    <br>- Advanced Learning Algorithms (DeepLearning.AI)
                     <br>- Deep Learning Specialization (DeepLearning.AI)
-                    <br>- <a href="https://www.coursera.org/learn/prompt-engineering" target="_blank">Prompt Engineering for ChatGPT</a> (Vanderbilt)
+                    <br>- Prompt Engineering for ChatGPT (Vanderbilt)
                 </li>
             </ul>
         </div>
