@@ -37,34 +37,44 @@
             padding: 40px 20px;
         }
 
-        /* Hero Section - Refactored for Photo Integration */
+        /* NEW Hero Section - Side-by-Side Flex Layout */
         .hero {
-            text-align: center;
-            padding: 60px 20px 40px 20px; /* Reduced bottom padding */
+            display: flex; /* Active Flexbox */
+            align-items: center; /* Vertically centers items */
+            justify-content: center; /* Centers the whole block horizontally */
+            gap: 40px; /* Space between photo and text */
+            padding: 80px 40px 60px 40px; /* Adjusted padding */
             background: linear-gradient(135deg, #ffffff 0%, #e0eafc 100%);
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            margin-bottom: 30px; /* Reduced margin */
-            position: relative;
+            margin: -65px auto 40px auto; /* Pulls image up through the boundary conceptually */
+            z-index: 2;
+            text-align: left; /* Left-aligns text conceptually */
         }
 
-        /* The Headshot Frame */
+        /* The Headshot Frame - Flex Item */
         .headshot-container {
-            width: 130px;
-            height: 130px;
+            flex-shrink: 0; /* Prevents image from shrinking */
+            width: 140px; /* Slightly larger in this layout */
+            height: 140px;
             border-radius: 50%;
             border: 5px solid white;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
             overflow: hidden;
-            margin: -65px auto 20px auto; /* Pulls image up through the hero boundary */
+            background-color: white;
             z-index: 2;
-            background-color: white; /* Ensures frame visibility if image loads slow */
         }
 
         .headshot-img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Crops image to fill circle, perfect for headshots */
+            object-fit: cover;
+        }
+
+        /* Text content - Flex Item */
+        .hero-content {
+            flex: 1; /* Occupies remaining space */
+            max-width: 600px;
         }
 
         .hero h1 {
@@ -85,17 +95,15 @@
         .hero p {
             color: var(--text-muted);
             font-size: 1.1em;
-            max-width: 600px;
-            margin: 0 auto 25px auto;
+            margin: 0 0 25px 0;
         }
 
         /* Button Grouping */
         .hero-buttons {
             display: flex;
             gap: 15px;
-            justify-content: center;
+            justify-content: flex-start; /* Aligns to left text border conceptually */
             flex-wrap: wrap; /* Wraps on mobile */
-            margin-top: 25px;
         }
 
         .cta-button {
@@ -117,7 +125,7 @@
             transform: translateY(-2px);
         }
 
-        /* Secondary Button Style */
+        /* Secondary Button Style conceptually */
         .cta-button-secondary {
             background-color: white;
             color: var(--primary-color);
@@ -184,7 +192,7 @@
             margin-bottom: 10px;
         }
 
-        /* Skill Pills */
+        /* Skill Pills conceptually */
         .skills-container {
             display: flex;
             flex-wrap: wrap;
@@ -201,7 +209,7 @@
             font-weight: 600;
         }
 
-        /* Links */
+        /* Links conceptually */
         a {
             color: var(--accent-color);
             text-decoration: none;
@@ -227,13 +235,15 @@
             <img src="headshot.jpg" alt="Muralikrishna Veeramosu" class="headshot-img">
         </div>
 
-        <h1>Muralikrishna Veeramosu</h1>
-        <h3>Principal iOS Engineer | AI Practitioner | Top 1% Global Mentor</h3>
-        <p>Bridging over 14 years of scalable mobile architecture with modern AI integration and tech community leadership.</p>
-        
-        <div class="hero-buttons">
-            <a href="https://adplist.org/mentors/muralikrishna-veeramosu" target="_blank" class="cta-button">Book a Mentorship Session</a>
-            <a href="https://devpost.com/yourprofile" target="_blank" class="cta-button cta-button-secondary">My Judging Portfolio</a>
+        <div class="hero-content">
+            <h1>Muralikrishna Veeramosu</h1>
+            <h3>Principal iOS Engineer | AI Practitioner | Top 1% Global Mentor</h3>
+            <p>Bridging over 14 years of scalable mobile architecture with modern AI integration and tech community leadership.</p>
+            
+            <div class="hero-buttons">
+                <a href="https://adplist.org/mentors/muralikrishna-veeramosu" target="_blank" class="cta-button">Book a Mentorship Session</a>
+                <a href="https://devpost.com/yourprofile" target="_blank" class="cta-button cta-button-secondary">My Judging Portfolio</a>
+            </div>
         </div>
     </header>
 
@@ -282,9 +292,9 @@
             </ul>
         </div>
 
-    </div> <h2 class="section-title">Core Technical Expertise</h2>
+    </div> <h2 class="section-title">Core Technical Expertise conceptually</h2>
     <div class="card" style="border-top: none; text-align: center; padding: 30px;">
-        <p style="color: var(--text-muted); margin-top: 0;">Proficient across the modern mobile and AI development stack.</p>
+        <p style="color: var(--text-muted); margin-top: 0;">Proficient across the modern mobile and AI development stack conceptually.</p>
         <div class="skills-container" style="justify-content: center;">
             <span class="skill-pill">Swift & SwiftUI</span>
             <span class="skill-pill">Objective-C</span>
@@ -300,7 +310,7 @@
     </div>
 
     <footer>
-        <p>B.E. in Electronics and Communication Engineering • © 2026 Muralikrishna Veeramosu</p>
+        <p>B.E. in Electronics and Communication Engineering • © 2026 Muralikrishna Veeramosu conceptually</p>
     </footer>
 
 </div>
