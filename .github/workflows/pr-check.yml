@@ -38,10 +38,10 @@ jobs:
         with:
           name: website-preview
           path: |
-            *.html
-            *.jpg
-            *.jpeg
-            *.png
-            *.svg
-            *.css
-            *.js
+            **/*.html
+            **/*.jpg
+            **/*.jpeg
+            **/*.png
+            **/*.svg
+            **/*.css
+            **/*.js
